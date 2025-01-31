@@ -1,0 +1,165 @@
+<div id="hero">
+  <div class="left">
+    <div class="intro">
+      <p class="intro-text">
+        <em class="bonjour">Bonjour<span class="ponctuation">,</span></em> <br>
+        Kevin is a full-stack freelance product designer with 7 years of
+        experience creating and designing best-in-class products and services<span class="ponctuation">.</span>
+      </p>
+      <div class="brand-thing">
+        <div class="yellow"></div>
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="green"></div>
+      </div>
+    </div>
+    <!-- brand thing -->
+    <span class="tagline">
+      Product design that bridges the gap between creative vision and technical
+      challenges.
+    </span>
+  </div>
+  <div class="right">
+    <div class="container">
+      <div class="card">
+        <span class="subtitle">
+          technical-centric product design
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #hero {
+    display: flex;
+    padding: 32px 0 16px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+  }
+
+  .left {
+    display: flex;
+    padding: 0px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .intro-text {
+    align-self: stretch;
+    color: var(--Main, #15171A);
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%;
+  }
+
+  .intro-text .ponctuation {
+    color: var(--Primary, #FFD900);
+    font-weight: 900;
+  }
+
+  .intro-text .bonjour {
+    color: var(--Main, #15171A);
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.8px;
+  }
+
+  .tagline {
+    color: var(--Main, #15171A);
+    font-family: Switzer;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 24px */
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .right .container {
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 16px;
+    background: rgba(255, 217, 0, 0.07);
+  }
+
+  .container .card {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: var(--Primary, #FFD900);
+    border-width: 2px;
+    border-bottom-width: 8px;
+    background: var(--Color-2, #FFF);
+  }
+
+  .card .subtitle {
+    color: var(--Main, #15171A);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+  }
+
+  .brand-thing {
+    display: flex;
+    height: 12px;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .brand-thing div {
+    border-radius: 2px;
+    width: 12px;
+    height: 100%;
+  }
+  
+  .brand-thing .yellow {
+    border-radius: 2px;
+    background: var(--Primary, #FFD900);
+    width: 24px;
+  }
+
+  .brand-thing .red {
+    background: var(--Main-1, #FF7477);
+  }
+  .brand-thing .blue {
+    background: var(--Main-2, #B4ADEA);
+  }
+  .brand-thing .green {
+    background: var(--Main-3, #8CDFD6);
+  }
+</style>
