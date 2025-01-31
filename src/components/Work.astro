@@ -1,0 +1,84 @@
+---
+import BrandThing from "./BrandThing.astro";
+---
+
+<div class="work">
+  <div class="preview">
+    <div class="screens"></div>
+  </div>
+  <div class="work-details">
+    <div class="description-container / rounded-container">
+      <div class="container-text">
+        <h2 class="container-title">La Bobine</h2>
+        <p class="container-description">
+          “La Bobine” is an innovative app for movie lovers, making it easy to
+          find a movie experience close to you without the hassle of having to
+          look at multiple places. With a user-centric and mobile-first approch,
+          I helped “La Bobine” with a complete redesign on its app. Creating a
+          new design system that fits with the components library already used
+          (Mandine, React).
+        </p>
+      </div>
+      <BrandThing />
+    </div>
+    <div class="tag-list">
+      <span>design-system</span>
+      <span>design-system</span>
+      <span>design-system</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .work {
+    display: flex;
+    padding: 40px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+    color: var(--Main, #15171a);
+  }
+
+  .work-details {
+    display: flex;
+    max-width: 720px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+
+  .tag-list {
+    display: flex;
+    padding: 0px 8px;
+    align-items: baseline;
+    align-self: stretch;
+    gap: 8px;
+    flex: 1 0 0;
+    font-family: Switzer;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    justify-content: start;
+  }
+
+  .preview {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: rgba(255, 217, 0, 0.07);
+  }
+
+  .preview .screens {
+    display: flex;
+    align-items: center;
+    gap: -64px;
+    align-self: stretch;
+  }
+</style>

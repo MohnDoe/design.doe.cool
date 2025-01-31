@@ -1,0 +1,28 @@
+---
+import Work from "./Work.astro";
+import WorkSeparator from "./WorkSeparator.astro";
+---
+
+<div class="work-list">
+  <WorkSeparator />
+  <Work />
+  <WorkSeparator />
+
+  <Work />
+  <WorkSeparator />
+
+  <Work />
+  <WorkSeparator />
+
+  <Work />
+  <Work />
+</div>
+
+<style>
+  .work-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+</style>

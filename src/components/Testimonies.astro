@@ -1,0 +1,102 @@
+---
+import BookACallButton from "./BookACallButton.astro";
+---
+
+<div class="testimonies">
+  <div class="testy / rounded-container">
+    <div class="container-text">
+      <h2 class="container-title / testy-title">Eric, CPO @ <b>SESAMm</b></h2>
+      <p class="container-descriptionq">
+        “J'ai eu l'occasion de travailler avec Kevin lors de la création d'un
+        nouveau produit B2B disposant d'une interface Web. Kevin a tout d'abord
+        posé les bases de l'UX et l'UI, puis il a apporté des améliorations en
+        continue avec l'arrivée de nouvelles fonctionnalités. Le travail que
+        Kevin a accompli est apprécié aussi bien par les équipes internes que
+        nos clients; les points forts étant l'ergonomie et le caractère intuitif
+        des solutions mises en oeuvre.”
+      </p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="text">
+      <span class="text-title">Let’s talk about<span class="ponctuation">:</span></span>
+      <ul>
+        <li>designing a new product</li>
+        <li>maintaining a design system</li>
+        <li>easing communications between technical and creative teams</li>
+        <li>your design needs and vision</li>
+        <li>anything I can help you with</li>
+      </ul>
+    </div>
+    <div class="button-container">
+      <BookACallButton/>
+      <span class="free">
+        It's fun, <b>and free.</b>
+      </span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .testimonies {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 64px;
+    align-self: stretch;
+  }
+  .testy-title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+  }
+
+  .text { 
+    color: var(--Main, #15171A);
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .text-title {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.72px;
+  }
+
+  li {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 8px;
+    line-height: 150%;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .free {
+    color: #15171A;
+    font-family: Switzer;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .free b {
+    font-weight: 700;
+  }
+</style>

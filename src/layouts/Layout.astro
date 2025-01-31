@@ -8,7 +8,9 @@
     <title>Kevin Pfeffer - freelance product designer, UX/UI designer</title>
   </head>
   <body>
-    <slot />
+    <div id="content">
+      <slot />
+    </div>
   </body>
 </html>
 
@@ -143,6 +145,83 @@
   }
 </style>
 
+<style is:global>
+  @font-face {
+    font-family: "Outfit";
+    src: url("/fonts/Outfit-Black.woff"), format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Outfit";
+    src: url("/fonts/Outfit-Medium.woff"), format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Switzer";
+    src: url("/fonts/Switzer-Bold.woff"), format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Switzer";
+    src: url("/fonts/Switzer-Regular.woff"), format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .rounded-container {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: var(--Main, #15171a);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 8px;
+    border-left-width: 3px;
+    background: #fff;
+  }
+
+  
+  .rounded-container .container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+  .rounded-container .container-title {
+    font-family: Outfit;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .rounded-container .container-description {
+    font-family: Switzer;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    align-self: stretch;
+  }
+
+  .ponctuation {
+    color: var(--Primary, #ffd900);
+    font-weight: 900;
+  }
+</style>
 <style>
   html,
   body {
@@ -150,12 +229,21 @@
     width: 100%;
     height: 100%;
   }
-  body {
+  #content {
     padding: 32px 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 64px;
-		background-color: rgba(var(--Primary, #FFD900), 0.05);
+  }
+  #content::before {
+    content: " ";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Primary, #ffd900);
+    opacity: 0.05;
+    z-index: -1;
   }
 </style>
