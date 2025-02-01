@@ -1,12 +1,38 @@
 ---
+import Image from "astro/components/Image.astro";
 import BrandThing from "./BrandThing.astro";
+import firstScreenImage from "../../src/images/work/bobine/iphone.png";
+import secondScreenImage from "../../src/images/work/bobine/desktop.png";
+
+const firstScreenAlt =
+  "Phone screen shot displaying the homepage of the app La Bobine";
+const secondScreenAlt =
+  "Phone screen shot displaying the homepage of the app La Bobine";
 ---
 
 <div class="work">
   <div class="preview">
-    <div class="screens"></div>
+    <div class="screens">
+      <div class="image-container image-container--first">
+      <Image src={firstScreenImage} alt={firstScreenAlt} width={90} class="image first-image"/>
+    </div>
+    <div class="image-container image-container--second">
+      <Image
+        src={secondScreenImage}
+        alt={secondScreenAlt}
+        width={350}
+        class="image second-image rounded-corners"
+      />
+    </div>
+
+    </div>
   </div>
   <div class="work-details">
+    <div class="tag-list">
+      <span>design-system</span>
+      <span>design-system</span>
+      <span>design-system</span>
+    </div>
     <div class="description-container / rounded-container">
       <div class="container-text">
         <h2 class="container-title">La Bobine</h2>
@@ -21,11 +47,6 @@ import BrandThing from "./BrandThing.astro";
       </div>
       <BrandThing />
     </div>
-    <div class="tag-list">
-      <span>design-system</span>
-      <span>design-system</span>
-      <span>design-system</span>
-    </div>
   </div>
 </div>
 
@@ -35,7 +56,7 @@ import BrandThing from "./BrandThing.astro";
     padding: 40px 16px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    gap: 16px;
     align-self: stretch;
     color: var(--Main, #15171a);
   }
@@ -45,10 +66,9 @@ import BrandThing from "./BrandThing.astro";
     max-width: 720px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 4px;
     align-self: stretch;
   }
-
 
   .tag-list {
     display: flex;
@@ -78,7 +98,24 @@ import BrandThing from "./BrandThing.astro";
   .preview .screens {
     display: flex;
     align-items: center;
-    gap: -64px;
     align-self: stretch;
+    overflow: hidden;
+  }
+  .image-container--first {
+    z-index: 1;
+  }
+  .image-container--second {
+    min-width: 0;
+    justify-items: end;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: end;
+  }
+
+  .image-container--second img {
+    border-radius: 4px;
+    overflow: hidden;
+    flex: 1 0 auto;
+    height: auto;
   }
 </style>

@@ -1,5 +1,5 @@
 ---
-const {class: className} = Astro.props
+const { class: className } = Astro.props;
 ---
 
 <div class={"brand-thing " + className}>
@@ -42,10 +42,12 @@ const {class: className} = Astro.props
   .brand-thing.small {
     height: 8px;
   }
-  
+
   .brand-thing.small div {
     width: 8px;
   }
 
-
+  .brand-thing.small div.yellow {
+    width: 16px;
+  }
 </style>
