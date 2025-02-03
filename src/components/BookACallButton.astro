@@ -1,5 +1,5 @@
 <button
-  class="button-cta / solid-shadow"
+  class="button-cta / solid-shadow solid-shadow--interactive"
   title="Book a Call"
   data-cal-link="mohndoe/30min"
   data-cal-namespace="30min"
@@ -22,6 +22,12 @@
     border-radius: 8px;
     border: none;
     background-color: var(--Primary, #FFD900);
+    cursor: pointer;
+    transition: 150ms;
+  }
+
+  .button-cta:hover {
+    background-color: #ffaa00;
   }
 
 </style>

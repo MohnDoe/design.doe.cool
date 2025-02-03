@@ -27,10 +27,11 @@ const { data } = Astro.props;
     </div>
     <div class="tag-list">
       {
-        data.tags.map((tag: string) => (
+        data.tags.map((tag: string, index: number) => (
           <>
             <span>{tag}</span>
-            <div class="dot" style={{ backgroundColor: data.color }} />
+            {data.tags.length > index + 1 ? (<div class="dot" style={{ backgroundColor: data.color }} />) : <></>}
+            
           </>
         ))
       }
@@ -72,8 +73,6 @@ const { data } = Astro.props;
     font-weight: 700;
     line-height: normal;
     justify-content: start;
-    overflow-y: scroll;
-    overflow-x: show;
     height: auto;
     line-height: 100%;
   }
@@ -168,6 +167,7 @@ const { data } = Astro.props;
       padding: 128px 0 128px 128px;
       flex: 1 0 0;
       border-radius: 16px 0 0px 16px;
+      overflow: hidden;
     }
 
     .screens {

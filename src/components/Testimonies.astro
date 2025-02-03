@@ -4,24 +4,27 @@ import BrandThing from "./BrandThing.astro";
 ---
 
 <div class="testimonies">
-  <div class="testy / rounded-container solid-shadow">
+  <div class="testy / rounded-container solid-shadow solid-shadow--responsive">
     <div class="container-text">
       <h2 class="container-title / testy-title">Eric, CPO @ <b>SESAMm</b></h2>
-      <p class="container-descriptionq">
+      <p class="container-description / testy-description">
         “J'ai eu l'occasion de travailler avec Kevin lors de la création d'un
-        nouveau produit B2B disposant d'une interface Web. Kevin a tout d'abord
-        posé les bases de l'UX et l'UI, puis il a apporté des améliorations en
-        continue avec l'arrivée de nouvelles fonctionnalités. Le travail que
-        Kevin a accompli est apprécié aussi bien par les équipes internes que
-        nos clients; les points forts étant l'ergonomie et le caractère intuitif
+        nouveau produit B2B disposant d'une interface Web. <br />
+        Kevin a tout d'abord posé les bases de l'UX et l'UI, puis il a apporté des
+        améliorations en continue avec l'arrivée de nouvelles fonctionnalités. Le
+        travail que Kevin a accompli est apprécié aussi bien par les équipes internes
+        que nos clients; les points forts étant l'ergonomie et le caractère intuitif
         des solutions mises en oeuvre.”
       </p>
     </div>
+    <BrandThing />
   </div>
   <div class="right">
-    <BrandThing/>
+    <BrandThing />
     <div class="text">
-      <span class="text-title">Let’s talk about<span class="ponctuation">:</span></span>
+      <span class="text-title"
+        >Let’s talk about<span class="ponctuation">:</span></span
+      >
       <ul>
         <li>designing a new product</li>
         <li>maintaining a design system</li>
@@ -31,7 +34,7 @@ import BrandThing from "./BrandThing.astro";
       </ul>
     </div>
     <div class="button-container">
-      <BookACallButton/>
+      <BookACallButton />
       <span class="free">
         It's fun, <b>and free.</b>
       </span>
@@ -50,9 +53,14 @@ import BrandThing from "./BrandThing.astro";
     align-self: stretch;
     background: rgba(255, 217, 0, 0.07);
   }
+
   .testy-title {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 500 !important;
+  }
+
+  .testy-title b {
+    font-weight: bold;
   }
 
   .right {
@@ -65,8 +73,8 @@ import BrandThing from "./BrandThing.astro";
     padding: 0 16px;
   }
 
-  .text { 
-    color: var(--Main, #15171A);
+  .text {
+    color: var(--Main, #15171a);
     font-family: Outfit;
     font-size: 24px;
     font-weight: 500;
@@ -98,7 +106,7 @@ import BrandThing from "./BrandThing.astro";
   }
 
   .free {
-    color: #15171A;
+    color: #15171a;
     font-family: Switzer;
     font-size: 14px;
     font-weight: 500;
@@ -106,5 +114,58 @@ import BrandThing from "./BrandThing.astro";
   }
   .free b {
     font-weight: 700;
+  }
+
+  @media (width >= 64rem) {
+    .testimonies {
+      padding: 64px 128px;
+      align-items: center;
+      gap: 64px;
+      flex-direction: row-reverse;
+      justify-items: center;
+    }
+
+    .testy {
+      display: flex;
+      align-self: center;
+      width: 680px;
+      padding: 40px;
+      gap: 32px;
+      flex: 1 1 auto;
+      height: auto;
+    }
+
+    .testy .container-text {
+      gap: 20px;
+    }
+
+    .testy .testy-title {
+      font-size: 32px;
+    }
+
+    .testy .testy-description {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 36px */
+    }
+
+    .right {
+      gap: 32px;
+      flex: 1 1 auto !important;
+      align-self: stretch;
+    }
+
+    .right .text {
+      font-size: 32px !important;
+    }
+
+    .right .text .text-title {
+      font-size: 48px;
+    }
+
+    .button-container {
+      gap: 16px;
+    }
   }
 </style>

@@ -44,4 +44,21 @@ import BrandThing from "./BrandThing.astro";
     text-underline-offset: auto;
     text-underline-position: from-font;
   }
+
+  .links a:hover {
+    font-weight: bold;
+  }
+
+  @media (width >= 64rem) {
+    .footer {
+      padding: 0px 64px;
+      align-self: stretch;
+    }
+    .footer, .links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-direction: row;
+    }
+  }
 </style>
