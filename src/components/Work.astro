@@ -1,38 +1,20 @@
 ---
 import Image from "astro/components/Image.astro";
 import BrandThing from "./BrandThing.astro";
-import firstScreenImage from "../../src/images/work/bobine/iphone.png";
+import screenImage from "../../src/images/work/bobine.png";
 import secondScreenImage from "../../src/images/work/bobine/desktop.png";
 
-const firstScreenAlt =
-  "Phone screen shot displaying the homepage of the app La Bobine";
-const secondScreenAlt =
+const workScreenAlt =
   "Phone screen shot displaying the homepage of the app La Bobine";
 ---
 
 <div class="work">
   <div class="preview">
     <div class="screens">
-      <div class="image-container image-container--first">
-      <Image src={firstScreenImage} alt={firstScreenAlt} width={90} class="image first-image"/>
-    </div>
-    <div class="image-container image-container--second">
-      <Image
-        src={secondScreenImage}
-        alt={secondScreenAlt}
-        width={350}
-        class="image second-image rounded-corners"
-      />
-    </div>
-
+      <Image src={screenImage} alt={workScreenAlt} width={800} class="image"/>
     </div>
   </div>
   <div class="work-details">
-    <div class="tag-list">
-      <span>design-system</span>
-      <span>design-system</span>
-      <span>design-system</span>
-    </div>
     <div class="description-container / rounded-container">
       <div class="container-text">
         <h2 class="container-title">La Bobine</h2>
@@ -46,6 +28,13 @@ const secondScreenAlt =
         </p>
       </div>
       <BrandThing />
+    </div>
+    <div class="tag-list">
+      <span>new design-system</span>
+      <div class="dot"></div>
+      <span>new design</span>
+      <div class="dot"></div>
+      <span>mobile</span>
     </div>
   </div>
 </div>
@@ -66,22 +55,37 @@ const secondScreenAlt =
     max-width: 720px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 8px;
     align-self: stretch;
   }
 
   .tag-list {
     display: flex;
-    padding: 0px 8px;
+    flex-wrap: nowrap;
     align-items: baseline;
     align-self: stretch;
     gap: 8px;
-    flex: 1 0 0;
+    flex: 1 1 auto;
     font-family: Switzer;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     line-height: normal;
     justify-content: start;
+    overflow-y: scroll;
+    height: auto;
+  }
+
+  .tag-list span {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+
+  .tag-list .dot {
+    flex: 0 0 auto;
+    height: 8px;
+    width: 8px;
+    border-radius: 2px;
+    background: #B4ADEA;
   }
 
   .preview {
@@ -101,8 +105,9 @@ const secondScreenAlt =
     align-self: stretch;
     overflow: hidden;
   }
-  .image-container--first {
-    z-index: 1;
+  .screens .image {
+    width: 100%;
+    height: auto;
   }
   .image-container--second {
     min-width: 0;
