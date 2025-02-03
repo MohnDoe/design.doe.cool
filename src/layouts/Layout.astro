@@ -46,14 +46,14 @@
           p(cal, ar);
         };
     })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "30min", { origin: "https://cal.com" });
+    Cal("init", "blabla", { origin: "https://cal.com" });
 
     // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
-    // `data-cal-link="mohndoe/30min"`
-    // data-cal-namespace="30min"
-    // `data-cal-config='{"layout":"month_view","theme":"auto"}'`
+    // `data-cal-link="mohndoe/blabla"`
+    // data-cal-namespace="blabla"
+    // `data-cal-config='{"layout":"month_view"}'`
 
-    Cal.ns["30min"]("ui", {
+    Cal.ns.blabla("ui", {
       cssVarsPerTheme: {
         light: { "cal-brand": "#292929" },
         dark: { "cal-brand": "#ffd900" },
@@ -239,25 +239,35 @@
   }
 
   .solid-shadow {
-    box-shadow: 0px 6px 0px 2px var(--Main, #15171A), 0px 0px 0px 2px var(--Main, #15171A);
+    box-shadow:
+      0px 6px 0px 2px var(--Main, #15171a),
+      0px 0px 0px 2px var(--Main, #15171a);
   }
 
   .solid-shadow--card {
-    box-shadow: 0px 6px 0px 2px var(--Primary, #ffd900), 0px 0px 0px 2px var(--Primary, #ffd900);
+    box-shadow:
+      0px 6px 0px 2px var(--Primary, #ffd900),
+      0px 0px 0px 2px var(--Primary, #ffd900);
   }
 
   @media (width >= 64rem) {
     .solid-shadow--responsive {
-      box-shadow: 0px 10px 0px 6px var(--Main, #15171A), 0px 0px 0px 6px var(--Main, #15171A);
+      box-shadow:
+        0px 10px 0px 6px var(--Main, #15171a),
+        0px 0px 0px 6px var(--Main, #15171a);
     }
 
     .solid-shadow--card {
-      box-shadow: 0px 8px 0px 4px var(--Primary, #ffd900), 0px 0px 0px 4px var(--Primary, #ffd900);
+      box-shadow:
+        0px 8px 0px 4px var(--Primary, #ffd900),
+        0px 0px 0px 4px var(--Primary, #ffd900);
     }
   }
 
   .solid-shadow--interactive:hover {
-    box-shadow: 0px 8px 0px 2px #30353b, 0px 0px 0px 2px #30353b;
+    box-shadow:
+      0px 8px 0px 2px #30353b,
+      0px 0px 0px 2px #30353b;
   }
 
   .rounded-container .container-text {
@@ -287,7 +297,6 @@
     color: var(--Primary, #ffd900);
     font-weight: 900;
   }
-
 </style>
 <style>
   html,
