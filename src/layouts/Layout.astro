@@ -242,6 +242,12 @@
     box-shadow: 0px 6px 0px 2px var(--Main, #15171A), 0px 0px 0px 2px var(--Main, #15171A);
   }
 
+  @media (width >= 64rem) {
+    .solid-shadow--responsive {
+      box-shadow: 0px 10px 0px 6px var(--Main, #15171A), 0px 0px 0px 6px var(--Main, #15171A);
+    }
+  }
+
   .rounded-container .container-text {
     display: flex;
     flex-direction: column;
@@ -269,6 +275,7 @@
     color: var(--Primary, #ffd900);
     font-weight: 900;
   }
+
 </style>
 <style>
   html,
@@ -293,5 +300,12 @@
     background-color: var(--Primary, #ffd900);
     opacity: 0.05;
     z-index: -1;
+  }
+
+  @media (width >= 64rem) {
+    #content {
+      padding: 80px 0;
+      gap: 64px;
+    }
   }
 </style>

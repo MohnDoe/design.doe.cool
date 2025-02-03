@@ -1,18 +1,13 @@
 ---
 import BookACallButton from "./BookACallButton.astro";
+import BrandCardContainer from "./BrandCardContainer.astro";
 import BrandThing from "./BrandThing.astro";
 ---
 
 <div id="hero">
   <div class="left">
-    <div class="card-container">
-      <div class="card">
-        <div class="logo">
-          <span class="logoname">Doe</span>
-          <BrandThing class={"small"} />
-        </div>
-        <span class="subtitle"> technical-centric product design </span>
-      </div>
+    <div class="card-container-left">
+      <BrandCardContainer />
     </div>
     <div class="intro">
       <p class="intro-text">
@@ -31,6 +26,9 @@ import BrandThing from "./BrandThing.astro";
     </span>
   </div>
   <div class="right">
+    <div class="card-container-right">
+      <BrandCardContainer />
+    </div>
     <BookACallButton />
   </div>
 </div>
@@ -43,6 +41,14 @@ import BrandThing from "./BrandThing.astro";
     align-items: flex-start;
     gap: 32px;
     align-self: stretch;
+  }
+
+  .card-container-left {
+    align-self: stretch;
+  }
+
+  .card-container-right {
+    visibility: hidden;
   }
 
   .left {
@@ -72,7 +78,7 @@ import BrandThing from "./BrandThing.astro";
     line-height: 135%;
   }
 
-  .intro-text .bonjour {
+  .bonjour {
     color: var(--Main, #15171a);
     font-size: 36px;
     font-style: normal;
@@ -98,52 +104,48 @@ import BrandThing from "./BrandThing.astro";
     align-self: stretch;
   }
 
-  .card-container {
-    display: flex;
-    padding: 16px 32px;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    align-self: stretch;
-    border-radius: 16px;
-    background: rgba(255, 217, 0, 0.07);
-  }
+  @media (width >= 64rem) {
+    #hero {
+      padding: 0px 80px;
+      flex-direction: row;
+    }
 
-  .card-container .card {
-    display: flex;
-    padding: 16px;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    border-style: solid;
-    border-radius: 8px;
-    border-color: var(--Primary, #ffd900);
-    border-width: 2px;
-    border-bottom-width: 8px;
-    background: var(--Color-2, #fff);
-  }
+    .left {
+      width: 980px;
+      align-items: flex-start;
+      gap: 80px;
+    }
 
-  .card .subtitle {
-    color: var(--Main, #15171a);
-    text-align: center;
-    font-family: Outfit, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%; /* 22.4px */
-  }
+    .left .intro {
+      width: 780px;
+      gap: 16px;
+    }
 
-  .card .logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .logo .logoname {
-    color: var(--Main, #15171a);
-    font-family: Outfit;
-    font-size: 32px;
-    font-weight: 900;
-    line-height: 100%; /* 36px */
+    .intro-text {
+      font-size: 36px;
+    }
+
+    .bonjour {
+      font-size: 64px;
+    }
+
+    .card-container-left {
+      display: none;
+      visibility: hidden;
+    }
+
+    .card-container-right {
+      visibility: visible;
+    }
+
+    .right {
+      flex: 1 0 0;
+      gap: 32px;
+      justify-content: center;
+    }
+
+    .tagline {
+      width: 610px;
+    }
   }
 </style>
