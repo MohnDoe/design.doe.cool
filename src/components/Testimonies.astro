@@ -1,26 +1,68 @@
 ---
+import Image from "astro/components/Image.astro";
 import BookACallButton from "./BookACallButton.astro";
 import BrandThing from "./BrandThing.astro";
+
+import Bourso from '../images/boursobank.png'
+import SESAMm from '../images/sesamm.png'
+import Bobine from '../images/bobine.png'
+import Tankobon from '../images/tankobon.png'
 ---
 
 <div class="testimonies">
-  <div class="testy / rounded-container solid-shadow solid-shadow--responsive">
-    <div class="container-text">
-      <h2 class="container-title / testy-title">Eric, CPO @ <b>SESAMm</b></h2>
-      <p class="container-description / testy-description">
-        “J'ai eu l'occasion de travailler avec Kevin lors de la création d'un
-        nouveau produit B2B disposant d'une interface Web. <br />
-        Kevin a tout d'abord posé les bases de l'UX et l'UI, puis il a apporté des
-        améliorations en continue avec l'arrivée de nouvelles fonctionnalités. Le
-        travail que Kevin a accompli est apprécié aussi bien par les équipes internes
-        que nos clients; les points forts étant l'ergonomie et le caractère intuitif
-        des solutions mises en oeuvre.”
-      </p>
+  <div class="left">
+    <div class="clients">
+      <Image
+        src={Bourso}
+        alt="BoursoBank's logo"
+      />
+      <Image
+        src={SESAMm}
+        alt="SESAMm's logo"
+      />
+      <Image
+        src={Bobine}
+        alt="La Bobine's logo"
+      />
+      <Image
+        src={Tankobon}
+        alt="Tankobon's logo"
+      />
     </div>
-    <BrandThing />
+    <div class="testimonies-container">
+      <div class="rounded-container solid-shadow">
+        <div class="container-text">
+          <p class="container-description">
+            [...] Kevin a tout d'abord posé <b>les bases de l'UX et l'UI</b>,
+            puis il a apporté des <b>améliorations en continu</b> avec l'arrivée
+            de <b>nouvelles fonctionnalités</b> [...]
+          </p>
+        </div>
+      </div>
+      <div class="rounded-container solid-shadow">
+        <div class="container-text">
+          <p class="container-description">
+            [...] Le travail que Kevin a accompli est apprécié aussi bien par
+            les <b>équipes internes que nos clients</b> [...]
+          </p>
+        </div>
+      </div>
+      <div class="rounded-container solid-shadow">
+        <div class="container-text">
+          <p class="container-description">
+            [...] les points forts étant <b>l'ergonomie</b> et le <b
+              >caractère intuitif</b
+            > des solutions [...]
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonies-end">
+      <span class="testimonies-good">You are in good hands.</span>
+      <BrandThing/>
+    </div>
   </div>
   <div class="right">
-    <BrandThing />
     <div class="text">
       <span class="text-title"
         >Let’s talk about<span class="ponctuation">:</span></span
@@ -54,13 +96,92 @@ import BrandThing from "./BrandThing.astro";
     background: rgba(255, 217, 0, 0.07);
   }
 
-  .testy-title {
-    font-size: 20px;
-    font-weight: 500 !important;
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
   }
 
-  .testy-title b {
+  .testimonies-container {
+    display: flex;
+    padding: 0px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 20px;
+  }
+
+  .testimonies-container .solid-shadow {
+    box-shadow:
+      0px 5px 0px 3px var(--Main, #15171a),
+      0px 0px 0px 3px var(--Main, #15171a);
+  }
+
+
+  .testimonies-container .rounded-container {
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .testimonies-container .rounded-container:nth-child(1) {
+    width: 360px;
+    max-width: 100%;
+    box-shadow:
+      0px 5px 0px 3px #FF7477,
+      0px 0px 0px 3px #FF7477;
+  }
+
+  .testimonies-container .rounded-container:nth-child(2) {
+    width: 260px;
+    align-self: flex-end;
+    box-shadow:
+      0px 5px 0px 3px #B4ADEA,
+      0px 0px 0px 3px #B4ADEA;
+  }
+
+  .testimonies-container .rounded-container:nth-child(3) {
+    width: 220px;
+    margin-left: 32px;
+    box-shadow:
+      0px 5px 0px 3px #8CDFD6,
+      0px 0px 0px 3px #8CDFD6;
+  }
+
+  .testimonies-container p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+  }
+
+  .testimonies-container p b {
     font-weight: bold;
+  }
+
+  .clients {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+  }
+
+  .clients img {
+    height: 12px;
+    width: auto;
+  }
+
+  .testimonies-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #15171A;
+    font-family: Switzer;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
   }
 
   .right {
@@ -70,7 +191,6 @@ import BrandThing from "./BrandThing.astro";
     align-items: center;
     gap: 32px;
     align-self: stretch;
-    padding: 0 16px;
   }
 
   .text {
@@ -157,15 +277,70 @@ import BrandThing from "./BrandThing.astro";
     }
 
     .right .text {
-      font-size: 32px !important;
+      font-size: 24px !important;
     }
 
     .right .text .text-title {
-      font-size: 48px;
+      font-size: 36px;
     }
 
     .button-container {
       gap: 16px;
+    }
+
+    .left {
+      gap: 32px;
+      flex: 0 1 740px;
+    }
+
+    .clients {
+      gap: 32px
+    }
+
+    .clients img {
+      height: 16px;
+    }
+
+    .testimonies-container p {
+      font-size: 20px;
+    }
+
+    .testimonies-container {
+      gap: 32px;
+      padding: 0;
+    }
+
+    .testimonies-container .rounded-container {
+      padding: 16px;
+      border-radius: 16px;
+    }
+    
+    .testimonies-container .rounded-container:nth-child(1) {
+      width: 640px;
+      max-width: 100%;
+      box-shadow:
+        0px 6px 0px 3px #FF7477,
+        0px 0px 0px 3px #FF7477 !important;
+    }
+
+    .testimonies-container .rounded-container:nth-child(2) {
+      width: 525px;
+      align-self: flex-end;
+      box-shadow:
+        0px 6px 0px 3px #B4ADEA,
+        0px 0px 0px 3px #B4ADEA !important;
+    }
+
+    .testimonies-container .rounded-container:nth-child(3) {
+      width: 480px;
+      margin-left: 32px;
+      box-shadow:
+        0px 6px 0px 3px #8CDFD6,
+        0px 0px 0px 3px #8CDFD6 !important;
+    }
+
+    .testimonies-end {
+      font-size: 16px;
     }
   }
 </style>
