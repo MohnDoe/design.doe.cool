@@ -1,40 +1,36 @@
 ---
 import Image from "astro/components/Image.astro";
 import BrandThing from "./BrandThing.astro";
-import screenImage from "../../src/images/work/bobine.png";
-import secondScreenImage from "../../src/images/work/bobine/desktop.png";
 
 const workScreenAlt =
   "Phone screen shot displaying the homepage of the app La Bobine";
+
+const { data } = Astro.props;
 ---
 
 <div class="work">
   <div class="preview">
     <div class="screens">
-      <Image src={screenImage} alt={workScreenAlt} width={800} class="image"/>
+      <Image src={data.image} alt={workScreenAlt} width={800} class="image" />
     </div>
   </div>
   <div class="work-details">
     <div class="description-container / rounded-container">
       <div class="container-text">
-        <h2 class="container-title">La Bobine</h2>
-        <p class="container-description">
-          “La Bobine” is an innovative app for movie lovers, making it easy to
-          find a movie experience close to you without the hassle of having to
-          look at multiple places. With a user-centric and mobile-first approch,
-          I helped “La Bobine” with a complete redesign on its app. Creating a
-          new design system that fits with the components library already used
-          (Mandine, React).
-        </p>
+        <h2 class="container-title">{data.name}</h2>
+        <p class="container-description" set:html={data.description}/>
       </div>
       <BrandThing />
     </div>
     <div class="tag-list">
-      <span>new design-system</span>
-      <div class="dot"></div>
-      <span>new design</span>
-      <div class="dot"></div>
-      <span>mobile</span>
+      {
+        data.tags.map((tag: string) => (
+          <>
+            <span>{tag}</span>
+            <div class="dot" style={{ backgroundColor: data.color }} />
+          </>
+        ))
+      }
     </div>
   </div>
 </div>
@@ -85,7 +81,6 @@ const workScreenAlt =
     height: 8px;
     width: 8px;
     border-radius: 2px;
-    background: #B4ADEA;
   }
 
   .preview {

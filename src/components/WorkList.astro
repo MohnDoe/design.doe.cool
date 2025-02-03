@@ -1,21 +1,23 @@
 ---
+import { getCollection } from "astro:content";
 import Work from "./Work.astro";
 import WorkSeparator from "./WorkSeparator.astro";
+
+const workList = await getCollection("workList");
 ---
 
 <div class="work-list">
   <WorkSeparator />
-  <Work />
-  <WorkSeparator />
-
-  <Work />
-  <WorkSeparator />
-
-  <Work />
-  <WorkSeparator />
-
-  <Work />
-  <Work />
+  {
+    workList.map((work) => (
+      <>
+        <Work 
+        data={work.data}
+        />
+        <WorkSeparator />
+      </>
+    ))
+  }
 </div>
 
 <style>

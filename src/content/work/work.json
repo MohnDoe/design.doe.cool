@@ -1,0 +1,40 @@
+{
+  "work": [
+    {
+      "slug": "bobine",
+      "name": "La Bobine",
+      "image": "./images/bobine.png",
+      "description": "“La Bobine” is an innovative app for movie lovers, making it easy to find a movie experience close to you without the hassle of having to look at multiple places. <br>With a user-centric and mobile-first approch, I helped “La Bobine” with a complete redesign on its app. Creating a new design system that fits with the components library already used (Mandine, React).",
+      "color": "#B4ADEA",
+      "tags": [
+        "design system",
+        "visual identity",
+        "mobile-first"
+      ]
+    },
+    {
+      "slug": "tankobon",
+      "name": "Tankobon",
+      "image": "./images/tankobon.png",
+      "description": "“Tankobon” aims to help manga fans manage their collections. <br>I worked on “Tankobon” and created its identity and visual language.. From an idea, my role was to create a completly new user experience and interface.",
+      "color": "#FF7477",
+      "tags": [
+        "UX",
+        "B2C",
+        "visual identity"
+      ]
+    },
+    {
+      "slug": "sesamm",
+      "name": "SESAMm",
+      "image": "./images/sesamm.png",
+      "description": "SESAMm is one of the french leading start-up in the fintech ecosystem, aiming to make sense of written articles all over the internet. <br>I was contracted by SESAMm for more than a year to work on multiple existing products and new ones. Mainly TextReveal, a technical app helping investor make sense of big data from billions of articles. SESAMm quickly raised 34M€ to achieve its goals.",
+      "color": "#8CDFD6",
+      "tags": [
+        "UX research",
+        "B2B",
+        "technical design"
+      ]
+    }
+  ]
+}
