@@ -3,10 +3,15 @@ import BrandThing from "./BrandThing.astro";
 ---
 
 <div class="card-container">
-  <div class="card">
+  <div class="card / solid-shadow solid-shadow--card">
     <div class="logo">
       <span class="logoname">Doe</span>
-      <BrandThing class={"small"} />
+      <div class="brandthingy-small">
+        <BrandThing class={"small"} />
+      </div>
+      <div class="brandthingy-normal">
+        <BrandThing />
+      </div>
     </div>
     <span class="subtitle"> technical-centric product design </span>
   </div>
@@ -24,21 +29,21 @@ import BrandThing from "./BrandThing.astro";
     background: rgba(255, 217, 0, 0.07);
   }
 
-  .card-container .card {
+  .brandthingy-normal {
+    display: none;
+  }
+
+  .card {
     display: flex;
     padding: 16px;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    border-style: solid;
     border-radius: 8px;
-    border-color: var(--Primary, #ffd900);
-    border-width: 2px;
-    border-bottom-width: 8px;
     background: var(--Color-2, #fff);
   }
 
-  .card .subtitle {
+  .subtitle {
     color: var(--Main, #15171a);
     text-align: center;
     font-family: Outfit, sans-serif;
@@ -48,17 +53,44 @@ import BrandThing from "./BrandThing.astro";
     line-height: 140%; /* 22.4px */
   }
 
-  .card .logo {
+  .logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
   }
-  .logo .logoname {
+  .logoname {
     color: var(--Main, #15171a);
     font-family: Outfit;
     font-size: 32px;
     font-weight: 900;
     line-height: 100%; /* 36px */
+  }
+  @media (width >= 64rem) {
+    .card-container {
+      padding: 32px;
+      gap: 16px;
+    }
+
+    .card {
+      padding: 32px 64px;
+      gap: 8px;
+    }
+
+    .logoname {
+      font-size: 64px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+    }
+
+    .brandthingy-normal {
+      display: block;
+    }
+
+    .brandthingy-small {
+      display: none;
+    }
   }
 </style>
