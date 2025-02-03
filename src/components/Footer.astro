@@ -1,0 +1,47 @@
+---
+import BrandThing from "./BrandThing.astro";
+---
+
+<div class="footer">
+  <BrandThing/>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/mohndoe/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/MohnDoe" target="_blank">GitHub</a>
+    <a href="mailto:bonjour@doe.cool" target="_blank">bonjour@doe.cool</a>
+  </div>
+</div>
+
+<style>
+  .footer {
+    display: flex;
+    padding: 0px 16px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .links a {
+    color: #15171A;
+    font-family: Switzer;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+</style>
