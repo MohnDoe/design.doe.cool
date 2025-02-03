@@ -2,16 +2,13 @@
 import { Image } from "astro:assets";
 import BrandThing from "./BrandThing.astro";
 
-const workScreenAlt =
-  "Phone screen shot displaying the homepage of the app La Bobine";
-
 const { data } = Astro.props;
 ---
 
 <div class="work">
   <div class="preview">
     <div class="screens">
-      <Image src={data.image} alt={workScreenAlt} class="image" />
+      <Image src={data.image} alt={`Screenshots of an app I designed ${data.name}, responsive`} class="image" />
     </div>
   </div>
   <div class="work-details">
