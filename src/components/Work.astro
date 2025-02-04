@@ -136,35 +136,78 @@ const { data } = Astro.props;
     padding: 32px 20px !important;
   }
 
-  @media (width >= 64rem) {
+  @media (width >= 48rem) {
     .work {
-      padding: 64px 0px 64px var(--Space-Work-Horizontal, 128px);
+      padding: 16px 0px 16px var(--Space-Work-Horizontal, 32px);
       flex-direction: row-reverse;
       justify-content: start;
     }
-
+    
     .work-details {
-      max-width: 720px;
-      padding: 64px 0px;
+      max-width: 480px;
+      padding: 32px 0px;
       gap: 16px;
       flex: 1 0 0;
       flex-direction: column-reverse;
       align-items: flex-start;
       justify-content: start;
-      margin-right: -64px;
+      margin-right: -16px;
+    }
+
+    
+    .preview {
+      display: flex;
+      align-self: stretch;
+      padding: 32px 0 32px 32px;
+      flex: 1 0 0;
+      border-radius: 8px 0 0px 8px;
+      overflow: hidden;
     }
 
     .tag-list {
       flex: 0 1 auto;
     }
+    
+    .screens {
+      margin-right: -64px;
+    }
+
+    
+    .description-container {
+      padding: 20px !important;
+      gap: 16px;
+    }
+
+    
+
+    .description-container .container-text {
+      gap: 8px
+    }
+
+    .work-title {
+      font-size: 24px !important;
+    }
+
+    .work-description {
+      font-size: 16px !important;
+    }
+  }
+
+  @media (width >= 80rem) {
+    .work {
+      padding: 64px 0px 64px var(--Space-Work-Horizontal, 128px);
+    }
+
+    .work-details {
+      max-width: 720px;
+      padding: 64px 0px;
+      margin-right: -64px;
+    }
+
 
     .preview {
-      display: flex;
-      align-self: stretch;
       padding: 128px 0 128px 128px;
-      flex: 1 0 0;
       border-radius: 16px 0 0px 16px;
-      overflow: hidden;
     }
 
     .screens {

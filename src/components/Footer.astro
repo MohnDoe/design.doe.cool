@@ -48,17 +48,25 @@ import BrandThing from "./BrandThing.astro";
   .links a:hover {
     font-weight: bold;
   }
-
-  @media (width >= 64rem) {
+  @media (width >= 48rem) {
     .footer {
-      padding: 0px 64px;
+      padding: 8px 32px;
       align-self: stretch;
     }
     .footer, .links {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 16px;
       flex-direction: row;
+    }
+  }
+
+  @media (width >= 80rem) {
+    .footer {
+      padding: 0px 64px;
+    }
+    .footer, .links {
+      gap: 32px;
     }
   }
 </style>

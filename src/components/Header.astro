@@ -107,29 +107,22 @@ import BrandThing from "./BrandThing.astro";
     align-self: stretch;
   }
 
-  @media (width >= 64rem) {
+  @media (width >= 48rem) {
     #hero {
-      padding: 0px 80px;
+      padding: 0px 40px;
       flex-direction: row;
     }
-
+    
     .left {
-      width: 980px;
+      width: 400px;
       align-items: flex-start;
-      gap: 80px;
+      gap: 20px;
     }
 
+    
     .left .intro {
-      width: 780px;
-      gap: 16px;
-    }
-
-    .intro-text {
-      font-size: 36px;
-    }
-
-    .bonjour {
-      font-size: 64px;
+      width: 100%;
+      gap: 8px;
     }
 
     .card-container-left {
@@ -142,6 +135,49 @@ import BrandThing from "./BrandThing.astro";
       visibility: visible;
     }
 
+    
+    .intro-text {
+      font-size: 22px;
+    }
+
+    .bonjour {
+      font-size: 36px;
+    }
+
+    .right {
+      flex: 1 0 0;
+      gap: 32px;
+      justify-content: center;
+    }
+
+    .tagline {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+
+  @media (width >= 80rem) {
+    #hero {
+      padding: 0px 80px;
+    }
+    
+    .left {
+      width: 700px;
+      gap: 80px;
+    }
+
+    .left .intro {
+      gap: 16px;
+    }
+
+    .intro-text {
+      font-size: 32px;
+    }
+
+    .bonjour {
+      font-size: 64px;
+    }
+
     .right {
       flex: 1 0 0;
       gap: 32px;
@@ -152,4 +188,6 @@ import BrandThing from "./BrandThing.astro";
       width: 610px;
     }
   }
+
+
 </style>

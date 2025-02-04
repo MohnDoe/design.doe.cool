@@ -236,13 +236,32 @@ import { Image } from "astro:assets";
     font-weight: 700;
   }
 
-  @media (width >= 64rem) {
+  @media (width >= 48rem) {
     .testimonies {
-      padding: 64px 128px;
+      padding: 32px 32px;
+      gap: 32px;
       align-items: center;
-      gap: 64px;
       flex-direction: row-reverse;
       justify-items: center;
+    }
+
+
+    .right .text {
+      font-size: 22px !important;
+      align-self: stretch !important;
+    }
+
+    
+    .testimonies-container p {
+      font-size: 16px;
+    }
+
+  }
+
+  @media (width >= 80rem) {
+    .testimonies {
+      padding: 64px 128px;
+      gap: 64px;
     }
 
     .testy {
@@ -277,8 +296,7 @@ import { Image } from "astro:assets";
     }
 
     .right .text {
-      font-size: 32px !important;
-      align-self: stretch !important;
+      font-size: 24px !important;
     }
 
     .right .text .text-title {
