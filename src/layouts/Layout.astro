@@ -6,9 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>
-      Kevin P., freelance product designer &amp; UX/UI designer
-    </title>
+    <title>Kevin P., freelance product designer &amp; UX/UI designer</title>
     <meta
       name="description"
       content="Kevin is a full-stack freelance product designer with 7 years of experience creating and designing best-in-class products."
@@ -89,16 +87,16 @@
           p(cal, ar);
         };
     })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "blabla", { origin: "https://cal.com" });
+    Cal("init", "discussion-design", { origin: "https://cal.com" });
 
     // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
-    // `data-cal-link="mohndoe/blabla"`
-    // data-cal-namespace="blabla"
-    // `data-cal-config='{"layout":"month_view"}'`
+    // `data-cal-link="mohndoe/discussion-design"`
+    // data-cal-namespace="discussion-design"
+    // `data-cal-config='{"layout":"month_view","theme":"auto"}'`
 
-    Cal.ns.blabla("ui", {
+    Cal.ns["discussion-design"]("ui", {
       cssVarsPerTheme: {
-        light: { "cal-brand": "#292929" },
+        light: { "cal-brand": "#ffee91" },
         dark: { "cal-brand": "#ffd900" },
       },
       hideEventTypeDetails: false,
@@ -296,8 +294,8 @@
   @media (width >= 48rem) {
     .solid-shadow--responsive {
       box-shadow:
-      0px 8px 0px 4px var(--Main, #15171a),
-      0px 0px 0px 4px var(--Main, #15171a);
+        0px 8px 0px 4px var(--Main, #15171a),
+        0px 0px 0px 4px var(--Main, #15171a);
     }
   }
 
@@ -374,8 +372,6 @@
     z-index: -1;
   }
 
-
-  
   @media (width >= 48rem) {
     #content {
       padding: 40px 0;
